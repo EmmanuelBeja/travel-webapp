@@ -4,12 +4,17 @@ import About from './components/About'
 import Discover from './components/Discover'
 import Experience from './components/Experience'
 import Video from './components/Video'
+import Places from './components/Places'
+import Subscribe from './components/Subscribe'
+import Sponsors from './components/Sponsors'
+import Footer from './components/Footer'
+import ScrollUp from './components/ScrollUp'
 
 import './App.scss'
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <main className="main">
         <Home />
@@ -17,8 +22,13 @@ function App() {
         <Discover />
         <Experience />
         <Video />
+        <Places />
+        <Subscribe />
+        <Sponsors />
       </main>
-    </div>
+      <Footer />
+      <ScrollUp />
+    </>
   )
 }
 
