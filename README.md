@@ -6,6 +6,8 @@ A React travel web application
 - node-sass
 - eslint
 - enzyme
+- scrollreveal
+- swiper
 
 ### Setup Requirements
 - node at least v10

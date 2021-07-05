@@ -1,6 +1,38 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Video = () => {
+  useEffect(() => {
+    // ==================== VIDEO ====================
+    const videoFile = document.getElementById('video-file')
+    const videoButton = document.getElementById('video-button')
+    const videoIcon = document.getElementById('video-icon')
+
+    const playPause = () => {
+      if (videoFile.paused) {
+        // Play video
+        videoFile.play()
+        // We change the icon
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line')
+      } else {
+        // Pause video
+        videoFile.pause()
+        // We change the icon
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line')
+      }
+    }
+    videoButton.addEventListener('click', playPause)
+
+    const finalVideo = () => {
+      // Video ends, icon change
+      videoIcon.classList.remove('ri-pause-line')
+      videoIcon.classList.add('ri-play-line')
+    }
+    // ended, when the video ends
+    videoFile.addEventListener('ended', finalVideo)
+  }, [])
+
   return (
     <section className="video section">
       <h2 className="section__title">Video Tour</h2>

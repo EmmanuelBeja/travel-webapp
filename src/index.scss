@@ -501,6 +501,10 @@ input {
   background-image: none;
 }
 
+.swiper-slide-active {
+  transform: var(--img-scale);
+}
+
 /*=============== EXPERIENCE ===============*/
 .experience {
   &__container {
